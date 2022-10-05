@@ -1,0 +1,8 @@
+----- Kubernetes 
+# Para iniciar um cluster kubernetes local utilizamos o kind
+# https://kind.sigs.k8s.io/
+$ kind create cluster --name=gitops
+
+# Para customizar a imagem que sera utilizada - usaremos o Kustomize
+# https://kustomize.io/
+$ 
