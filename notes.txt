@@ -5,4 +5,19 @@ $ kind create cluster --name=gitops
 
 # Para customizar a imagem que sera utilizada - usaremos o Kustomize
 # https://kustomize.io/
-$ 
+
+
+----- ArgoCD
+# Para realizar o deploy
+# https://argo-cd.readthedocs.io/en/stable/getting_started/
+
+# Install
+$ kubectl create namespace argocd
+$ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+# Login
+$ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+
+# Iniciar o argocd
+$ kubectl port-forward svc/argocd-server -n argocd 8080:443
+
