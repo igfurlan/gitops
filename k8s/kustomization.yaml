@@ -8,4 +8,4 @@ resources:
 images:
 - name: goserver
   newName: igfurlan/gitops
-  newTag: 0f600841274bab97bd326b77bad9a5381ffd807b
+  newTag: 624edf47e6913e4b0f16cd1ee276be28d41d680d
